@@ -1,35 +1,63 @@
-Titolo suggerito: Soluzioni su misura per la tua Farmacia
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmLink | Piani e Servizi</title>
+    <style>
+        body {
+            background-color: #0a192f;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-Scegli il livello di automazione perfetto per te.
-Che tu gestisca una singola farmacia rurale o un network cittadino, PharmLink ha il piano giusto per far brillare la tua vetrina.
+        /* Navigazione */
+        header { 
+            border-bottom: 4px solid #00ff88; 
+            padding: 20px 50px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+        }
+        .nav-logo { font-size: 1.8rem; font-weight: 900; }
+        .nav-logo span { color: #00ff88; }
+        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+        nav a { 
+            color: #cbd5e1; text-decoration: none; font-weight: 600; 
+            text-transform: uppercase; font-size: 0.9rem; transition: 0.3s;
+        }
+        nav a:hover, nav a.active { color: #00ff88; }
 
-Piano BASIC
-L'essenziale per l'obbligo di legge e il servizio al cliente.
+        /* Contenuti Principali */
+        main { flex: 1; padding: 60px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        h1 { font-size: 3rem; margin-bottom: 15px; color: #ffffff; }
+        p.subtitle { font-size: 1.3rem; color: #cbd5e1; max-width: 800px; margin: 0 auto 50px; line-height: 1.6; }
 
-Display Orari di apertura dinamici.
-
-Farmacie di turno H24 sincronizzate.
-
-QR Code per navigazione stradale.
-
-Layout Standard (Orizzontale/Verticale).
-
-Piano PROFESSIONAL
-Per chi vuole trasformare il monitor in uno strumento di vendita.
-
-Tutto il piano Basic.
-
-Player Multimediale Integrato: Gestione di slide promozionali e video offerte.
-
-Programmazione palinsesti orari (es. offerte diverse mattina/pomeriggio).
-
-Supporto tecnico prioritario.
-
-Piano ENTERPRISE / NETWORK
-Per catene di farmacie e gruppi d'acquisto.
-
-Gestione centralizzata di N monitor da un unico pannello.
-
-Statistiche di uptime e monitoraggio remoto.
-
-Personalizzazione grafica totale del brand.
+        /* Griglia Piani */
+        .pricing-grid { 
+            display: flex; 
+            gap: 30px; 
+            justify-content: center; 
+            align-items: center;
+            flex-wrap: wrap; 
+        }
+        
+        .pricing-card { 
+            background: #172a45; 
+            padding: 40px 30px; 
+            border-radius: 20px; 
+            border: 1px solid #233554; 
+            flex: 1; 
+            min-width: 280px; 
+            max-width: 350px; 
+            text-align: left; 
+            transition: transform 0.3s; 
+        }
+        
+        .pricing-card:hover { transform: translateY(-5px); border-color: #00ff88; }
+        
+        /* Stile speciale
