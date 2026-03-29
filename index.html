@@ -28,14 +28,15 @@
             padding: 20px;
         }
 
-        .splash-video {
+       .splash-video {
             width: 100%;
             height: auto;
-            /* Sfondo video identico alla pagina per fusione totale */
             background-color: #eaf8b2; 
             border: none;
             outline: none;
-            /* Rimosse ombre e bordi per un look pulito su sfondo chiaro */
+            /* Questo crea un "bagliore" esterno dello stesso colore dello sfondo */
+            /* che copre la giuntura tra video e pagina */
+            box-shadow: 0 0 20px 20px #eaf8b2; 
         }
 
         .claim {
