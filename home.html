@@ -4,141 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PharmLink | Il Progetto</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #0a192f;
-            color: white;
-            font-family: 'Montserrat', sans-serif; /* Applicato a tutto */
-            margin: 0;
-            line-height: 1.6;
+        body { 
+            /* Sfondo chiaro in continuità con la splash page */
+            background-color: #eaf8b2; 
+            /* Testo blu scuro */
+            color: #17304a; 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+            line-height: 1.6; 
         }
-
-        /* Navigazione */
+        
         header { 
-            border-bottom: 4px solid #00ff88; 
+            /* Bordo inferiore azzurro */
+            border-bottom: 4px solid #75d8f0; 
             padding: 20px 50px; 
             display: flex; 
             justify-content: space-between; 
-            align-items: center;
-            background: #0a192f;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            align-items: center; 
+            background: #eaf8b2; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
         }
         
-        .nav-logo { 
-            font-size: 1.8rem; 
-            font-weight: 900; /* Massimo spessore per il brand */
-            letter-spacing: -1px;
-        }
-        .nav-logo span { color: #00ff88; }
-
+        .nav-logo { font-size: 1.8rem; font-weight: 900; letter-spacing: -1px; color: #17304a; }
+        .nav-logo span { color: #75d8f0; } /* Scritta LINK in azzurro */
+        
         nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
         nav a { 
-            color: #cbd5e1; 
+            color: #17304a; 
             text-decoration: none; 
-            font-weight: 600; 
+            font-weight: 700; 
             text-transform: uppercase; 
             font-size: 0.85rem; 
-            letter-spacing: 1px;
+            letter-spacing: 1px; 
             transition: 0.3s; 
         }
-        nav a:hover, nav a.active { color: #00ff88; }
+        nav a:hover, nav a.active { color: #75d8f0; }
 
-        /* Sezione Hero */
-        .hero {
-            padding: 80px 20px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .hero { padding: 80px 20px; text-align: center; max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 20px; line-height: 1.1; color: #17304a; }
+        .hero p { font-size: 1.2rem; font-weight: 500; color: #17304a; margin-bottom: 40px; }
 
-        h1 { 
-            font-size: 3.5rem; 
-            font-weight: 900; 
-            margin-bottom: 20px;
-            line-height: 1.1;
+        /* Riquadro scuro per far risaltare le informazioni e creare dinamismo */
+        .info-section { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px; 
+            padding: 60px 50px; 
+            background: #17304a; /* Sfondo Blu Navy */
+            color: white; 
+            border-radius: 20px; 
+            margin: 0 20px 40px; 
+            box-shadow: 0 15px 35px rgba(23, 48, 74, 0.2); 
         }
-
-        .hero p {
-            font-size: 1.2rem;
-            font-weight: 300; /* Più leggero per contrasto */
-            color: #cbd5e1;
-            margin-bottom: 40px;
-        }
-
-        /* Sezione Features Veloci */
-        .info-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            padding: 40px 50px;
-            background: #112240;
-        }
-
-        .info-box h2 {
-            color: #00ff88;
-            font-weight: 600;
-            font-size: 1.5rem;
-        }
-
-        .info-box p {
-            font-weight: 400;
-            color: #94a3b8;
-        }
+        
+        .info-box h2 { color: #75d8f0; font-weight: 700; font-size: 1.5rem; margin-top: 0; }
+        .info-box p { color: #eaf8b2; font-weight: 300; } /* Testi descrittivi color tortora chiaro */
 
         footer { 
             text-align: center; 
             padding: 40px; 
-            border-top: 1px solid #233554; 
-            color: #64748b; 
-            font-size: 0.8rem;
-            font-weight: 400;
+            border-top: 1px solid rgba(23, 48, 74, 0.2); 
+            color: #17304a; 
+            font-size: 0.9rem; 
+            font-weight: 500; 
         }
+        footer a { color: #17304a; font-weight: 700; text-decoration: none; }
+        footer a:hover { color: #75d8f0; }
     </style>
 </head>
 <body>
-
     <header>
         <div class="nav-logo">PHARM<span>LINK</span></div>
-        <nav>
-            <ul>
-                <li><a href="home.html" class="active">Il Progetto</a></li>
-                <li><a href="perche.html">Perché PharmLink</a></li>
-                <li><a href="piani.html">Piani e Servizi</a></li>
-            </ul>
-        </nav>
+        <nav><ul>
+            <li><a href="home.html" class="active">Il Progetto</a></li>
+            <li><a href="perche.html">Perché PharmLink</a></li>
+            <li><a href="piani.html">Piani e Servizi</a></li>
+        </ul></nav>
     </header>
-
     <main>
         <section class="hero">
             <h1>Il futuro della vetrina digitale.</h1>
-            <p>PharmLink è la piattaforma intelligente che automatizza la comunicazione della tua farmacia. Gestisci turni, orari e promozioni in tempo reale, senza muovere un dito.</p>
-            <img src="assets/img/logo.png" alt="Logo" style="width: 150px; opacity: 0.5;">
+            <p>PharmLink è la piattaforma intelligente che automatizza la comunicazione della tua farmacia.</p>
         </section>
-
+        
         <section class="info-section">
             <div class="info-box">
                 <h2>Automazione Reale</h2>
-                <p>Nessun software complicato da installare. Sincronizziamo i dati direttamente dai tuoi fogli di lavoro Google.</p>
+                <p>Sincronizziamo i dati direttamente dai tuoi fogli Google.</p>
             </div>
             <div class="info-box">
                 <h2>Servizio H24</h2>
-                <p>I tuoi clienti troveranno sempre le farmacie di turno aggiornate, con QR code per la navigazione immediata.</p>
+                <p>Farmacie di turno sempre aggiornate con QR code.</p>
             </div>
             <div class="info-box">
                 <h2>Pronto all'uso</h2>
-                <p>Compatibile con ogni Smart TV o monitor professionale. Basta un browser per iniziare a trasmettere.</p>
+                <p>Compatibile con ogni Smart TV o monitor di ultima generazione.</p>
             </div>
         </section>
     </main>
-
-    <footer>
-        &copy; 2026 PharmLink | Innovazione Digitale per Farmacie | <a href="mailto:info@pharmlink.it" style="color:#64748b; text-decoration: none;">Contatti</a>
-    </footer>
-
+    <footer>&copy; 2026 PharmLink | <a href="mailto:info@pharmlink.it">Contattaci</a></footer>
 </body>
 </html>
