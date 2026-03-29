@@ -3,141 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PharmLink | Piani e Servizi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <title>Piani e Servizi | PharmLink</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #0a192f;
-            color: white;
-            body {
-    /* ... altri stili ... */
-    font-family: 'Montserrat', sans-serif;
-}
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Navigazione */
-        header { 
-            border-bottom: 4px solid #00ff88; 
-            padding: 20px 50px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-        }
+        body { background-color: #eaf8b2; color: #17304a; font-family: 'Montserrat', sans-serif; margin: 0; }
+        header { border-bottom: 4px solid #75d8f0; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; background: #eaf8b2; }
         .nav-logo { font-size: 1.8rem; font-weight: 900; }
-        .nav-logo span { color: #00ff88; }
-        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
-        nav a { 
-            color: #cbd5e1; text-decoration: none; font-weight: 600; 
-            text-transform: uppercase; font-size: 0.9rem; transition: 0.3s;
-        }
-        nav a:hover, nav a.active { color: #00ff88; }
+        .nav-logo span { color: #75d8f0; }
+        nav a { color: #17304a; text-decoration: none; font-weight: 700; text-transform: uppercase; margin-left: 25px; }
 
-        /* Contenuti */
-        main { flex: 1; padding: 60px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
-        h1 { font-size: 3rem; margin-bottom: 15px; }
-        .subtitle { font-size: 1.2rem; color: #cbd5e1; margin-bottom: 50px; line-height: 1.6; }
-
-        /* Griglia Piani */
-        .pricing-grid { 
-            display: flex; 
-            gap: 25px; 
-            justify-content: center; 
-            flex-wrap: wrap; 
-        }
+        .pricing-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        th { background: #17304a; color: white; padding: 25px; text-align: center; font-size: 1.2rem; }
+        td { padding: 20px; border-bottom: 1px solid #eee; text-align: center; }
         
-        .pricing-card { 
-            background: #172a45; 
-            padding: 40px 30px; 
-            border-radius: 20px; 
-            border: 1px solid #233554; 
-            flex: 1; 
-            min-width: 300px; 
-            max-width: 380px; 
-            text-align: left; 
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .pricing-card.featured { border: 2px solid #00ff88; position: relative; background: #112240; }
-        .badge { 
-            background: #00ff88; color: #0a192f; font-weight: 800; font-size: 0.75rem; 
-            padding: 4px 12px; border-radius: 20px; position: absolute; top: -12px; left: 30px; 
-        }
-
-        .pricing-card h2 { color: #00ff88; font-size: 2.2rem; margin: 0 0 10px 0; }
-        .pricing-card .price-info { color: #94a3b8; font-style: italic; margin-bottom: 20px; font-size: 0.9rem; }
-        
-        .pricing-card ul { list-style: none; padding: 0; margin: 0; color: #cbd5e1; flex-grow: 1; }
-        .pricing-card li { margin-bottom: 15px; line-height: 1.4; padding-left: 25px; position: relative; }
-        .pricing-card li::before { content: "✔"; position: absolute; left: 0; color: #00ff88; font-weight: bold; }
-        .pricing-card li strong { color: #fff; display: block; margin-bottom: 2px; }
-
-        footer { text-align: center; padding: 40px; border-top: 1px solid #233554; color: #64748b; font-size: 0.8rem; margin-top: 50px; }
+        .price { font-size: 1.5rem; font-weight: 900; color: #75d8f0; }
+        .btn { background: #17304a; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 10px; }
+        .btn:hover { background: #75d8f0; color: #17304a; }
     </style>
 </head>
 <body>
-
     <header>
         <div class="nav-logo">PHARM<span>LINK</span></div>
         <nav>
-            <ul>
-                <li><a href="home.html">Il Progetto</a></li>
-                <li><a href="perche.html">Perché PharmLink</a></li>
-                <li><a href="piani.html" class="active">Piani e Servizi</a></li>
-            </ul>
+            <a href="home.html">Il Progetto</a>
+            <a href="perche.html">Perché PharmLink</a>
+            <a href="piani.html" class="active">Piani e Servizi</a>
         </nav>
     </header>
-
-    <main>
-        <h1>Soluzioni su misura per la tua Farmacia</h1>
-        <p class="subtitle">Scegli il livello di automazione perfetto per gestire la tua comunicazione visiva senza pensieri.</p>
-
-        <div class="pricing-grid">
-            
-            <div class="pricing-card">
-                <h2>BASIC</h2>
-                <p class="price-info">L'essenziale per l'obbligo di legge e il servizio al cliente.</p>
-                <ul>
-                    <li><strong>Display Orari Dinamici</strong> Gestione automatica delle aperture ordinarie e straordinarie.</li>
-                    <li><strong>Farmacie di Turno H24</strong> Sincronizzazione in tempo reale con i dati del territorio.</li>
-                    <li><strong>QR Code Stradali</strong> Navigazione istantanea verso la farmacia di turno più vicina.</li>
-                    <li><strong>Layout Adattivo</strong> Ottimizzato per monitor orizzontali e verticali.</li>
-                </ul>
-            </div>
-
-            <div class="pricing-card featured">
-                <div class="badge">IL PIÙ SCELTO</div>
-                <h2>PRO</h2>
-                <p class="price-info">Per chi vuole trasformare il monitor in uno strumento di vendita.</p>
-                <ul>
-                    <li><strong>Tutto il piano BASIC incluso</strong> La solidità del servizio base con marcia in più.</li>
-                    <li><strong>Player Multimediale</strong> Gestione integrata di slide promozionali e video offerte.</li>
-                    <li><strong>Palinsesti Orari</strong> Programmazione di contenuti diversi per fasce orarie (es. mattino/pomeriggio).</li>
-                    <li><strong>Supporto Prioritario</strong> Interventi tecnici e assistenza dedicata garantita.</li>
-                </ul>
-            </div>
-
-            <div class="pricing-card">
-                <h2>NETWORK</h2>
-                <p class="price-info">Per catene di farmacie e gruppi d'acquisto.</p>
-                <ul>
-                    <li><strong>Gestione Centralizzata</strong> Controlla N monitor da un unico pannello di controllo Google.</li>
-                    <li><strong>Sincronizzazione di Gruppo</strong> Aggiorna le offerte su tutti i punti vendita con un solo click.</li>
-                    <li><strong>Monitoraggio Uptime</strong> Statistiche in tempo reale sullo stato di ogni display.</li>
-                    <li><strong>Branding Totale</strong> Personalizzazione grafica completa con il logo della catena.</li>
-                </ul>
-            </div>
-
-        </div>
-    </main>
-
-    <footer>
-        &copy; 2026 PharmLink | P.IVA 01234567890 | <a href="mailto:info@pharmlink.it" style="color:#64748b">Supporto Clienti</a>
-    </footer>
-
+    <div class="pricing-container">
+        <h1 style="text-align: center; margin-bottom: 40px;">Scegli la tua soluzione</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Servizio</th>
+                    <th>Basic</th>
+                    <th>Professional</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monitor Intelligente</td>
+                    <td>Incluso</td>
+                    <td>Incluso</td>
+                </tr>
+                <tr>
+                    <td>Aggiornamento Turni</td>
+                    <td>Settimanale</td>
+                    <td>Real-time</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 700;">Canone Mensile</td>
+                    <td class="price">€29</td>
+                    <td class="price">€49</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#" class="btn">Attiva</a></td>
+                    <td><a href="#" class="btn">Attiva</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
