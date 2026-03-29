@@ -3,100 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PharmLink | Perché Sceglierci</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <title>Perché PharmLink | Innovazione</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #0a192f;
-            color: white;
-            body {
-    /* ... altri stili ... */
-    font-family: 'Montserrat', sans-serif;
-}
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Navigazione */
-        header { 
-            border-bottom: 4px solid #00ff88; 
-            padding: 20px 50px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-        }
-        .nav-logo { font-size: 1.8rem; font-weight: 900; }
-        .nav-logo span { color: #00ff88; }
-        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
-        nav a { 
-            color: #cbd5e1; text-decoration: none; font-weight: 600; 
-            text-transform: uppercase; font-size: 0.9rem; transition: 0.3s;
-        }
-        nav a:hover, nav a.active { color: #00ff88; }
-
-        /* Contenuti */
-        main { flex: 1; padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
-        .hero-text { text-align: center; margin-bottom: 50px; }
-        h1 { font-size: 3rem; margin-bottom: 20px; color: #ffffff; }
-        .hero-text p { font-size: 1.3rem; color: #cbd5e1; max-width: 800px; margin: 0 auto; line-height: 1.6; }
-
-        /* Griglia Card */
-        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
-        .feature-card { 
-            background: #172a45; padding: 30px; border-radius: 20px; 
-            border: 1px solid #233554; transition: transform 0.3s;
-        }
-        .feature-card:hover { transform: translateY(-5px); border-color: #00ff88; }
-        .feature-card h3 { color: #00ff88; font-size: 1.5rem; margin-top: 0; }
-        .feature-card p { color: #cbd5e1; font-size: 1.1rem; line-height: 1.5; }
-
-        footer { text-align: center; padding: 30px; border-top: 1px solid #233554; color: #64748b; font-size: 0.8rem; }
+        body { background-color: #eaf8b2; color: #17304a; font-family: 'Montserrat', sans-serif; margin: 0; line-height: 1.6; }
+        header { border-bottom: 4px solid #75d8f0; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; background: #eaf8b2; position: sticky; top: 0; z-index: 1000; }
+        .nav-logo { font-size: 1.8rem; font-weight: 900; color: #17304a; }
+        .nav-logo span { color: #75d8f0; }
+        nav a { color: #17304a; text-decoration: none; font-weight: 700; text-transform: uppercase; margin-left: 25px; font-size: 0.85rem; }
+        nav a:hover, nav a.active { color: #75d8f0; }
+        
+        .container { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+        h1 { font-size: 3rem; font-weight: 900; text-align: center; margin-bottom: 50px; }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .card { background: white; padding: 30px; border-radius: 15px; border-left: 8px solid #75d8f0; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card h3 { color: #17304a; margin-top: 0; font-size: 1.4rem; }
+        
+        footer { text-align: center; padding: 40px; color: #17304a; font-weight: 500; }
     </style>
 </head>
 <body>
-
     <header>
         <div class="nav-logo">PHARM<span>LINK</span></div>
         <nav>
-            <ul>
-                <li><a href="home.html">Il Progetto</a></li>
-                <li><a href="perche.html" class="active">Perché passare a PharmLink</a></li>
-                <li><a href="piani.html">Piani e Servizi</a></li>
-            </ul>
+            <a href="home.html">Il Progetto</a>
+            <a href="perche.html" class="active">Perché PharmLink</a>
+            <a href="piani.html">Piani e Servizi</a>
         </nav>
     </header>
-
-    <main>
-        <section class="hero-text">
-            <h1>L'efficienza che non si vede, ma si sente.</h1>
-            <p>Molti sistemi di digital signage per farmacie richiedono ore di gestione, caricamento manuale di file e interventi tecnici costosi. PharmLink ribalta il paradigma.</p>
-        </section>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Addio Interventi Manuali</h3>
-                <p>Il sistema interroga i tuoi dati in tempo reale. Se modifichi un orario o un turno sul tuo foglio di gestione Google, il monitor si aggiorna istantaneamente.</p>
+    <div class="container">
+        <h1>Perché sceglierci?</h1>
+        <div class="grid">
+            <div class="card">
+                <h3>Zero Stress</h3>
+                <p>Non dovrai più preoccuparti di aggiornare manualmente i monitor. PharmLink lo fa per te mentre ti occupi dei tuoi clienti.</p>
             </div>
-            <div class="feature-card">
-                <h3>Gestione Turni Intelligente</h3>
-                <p>PharmLink sa chi è di turno oggi e domani. Calcola le fasce orarie e genera automaticamente un QR Code per permettere ai tuoi clienti di portare le informazioni sullo smartphone.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Hardware Invisibile</h3>
-                <p>Non serve un PC dedicato. Il nostro motore è così leggero (serverless) che può girare su qualsiasi Smart TV o piccolo media player, riducendo consumi e ingombri.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Layout Adattivo</h3>
-                <p>Orizzontale o Verticale? PharmLink rileva l'orientamento del monitor e riorganizza graficamente i contenuti per garantirti sempre la massima leggibilità e un impatto estetico professionale.</p>
+            <div class="card">
+                <h3>Sempre Aggiornati</h3>
+                <p>I turni e le promozioni cambiano? Basta una modifica sul tuo file Excel/Google e il monitor si aggiorna in tempo reale.</p>
             </div>
         </div>
-    </main>
-
-    <footer>
-        &copy; 2026 PharmLink | P.IVA 01234567890 | <a href="mailto:info@pharmlink.it" style="color:#64748b">Contattaci</a>
-    </footer>
-
+    </div>
+    <footer>&copy; 2026 PharmLink</footer>
 </body>
 </html>
