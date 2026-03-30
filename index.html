@@ -25,9 +25,12 @@
             width: 100%;
             max-width: 800px; 
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* Stile essenziale per non far sparire il video */
+        /* Stile essenziale per il video */
         #splashVideo {
             width: 100%;
             height: auto;
@@ -43,7 +46,21 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 5px;
-            opacity: 0.9;
+            
+            /* EFFETTO APPARIZIONE AL 3° SECONDO */
+            opacity: 0; /* Parte invisibile */
+            animation: fadeInOnSpot 1.5s forwards; /* Dura 1.5 secondi */
+            animation-delay: 3s; /* Parte dopo 3 secondi */
+        }
+
+        /* Animazione fluida sul posto */
+        @keyframes fadeInOnSpot {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 0.9; /* Opacità finale come nel tuo originale */
+            }
         }
     </style>
 </head>
@@ -52,7 +69,7 @@
     <div class="splash-container">
         <video id="splashVideo" autoplay muted playsinline preload="auto">
            <source src="assets/img/Splash-page.webm" type="video/webm">
-            </video>
+        </video>
         
         <div class="claim">TRASFORMA UN OBBLIGO IN OPPORTUNITA'</div>
     </div>
@@ -67,10 +84,11 @@
             }, 1000); 
         };
 
-        // Rete di salvataggio: se il file non viene trovato, va alla home dopo 6 secondi
+        // Rete di salvataggio: se il file non viene trovato o il video è lungo, va alla home dopo 8 secondi
+        // Ho aumentato a 8s per dare tempo al video di finire dopo l'apparizione della scritta al 3° sec
         setTimeout(function() {
             window.location.href = "home.html";
-        }, 6000);
+        }, 8000);
     </script>
 </body>
 </html>
