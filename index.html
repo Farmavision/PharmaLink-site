@@ -9,6 +9,7 @@
     
     <style>
         body {
+            /* Sfondo Tortora/Menta chiaro */
             background-color: #eaf8b2; 
             margin: 0;
             height: 100vh;
@@ -26,16 +27,13 @@
             padding: 20px;
         }
 
+        /* Stile essenziale per non far sparire il video */
         #splashVideo {
             width: 100%;
             height: auto;
-            background-color: #eaf8b2; 
             border: none;
             outline: none;
-            /* Il box-shadow aiuta a sfumare i bordi del video con lo sfondo */
-            box-shadow: 0 0 30px 30px #eaf8b2; 
-            /* Importante: rimuove lo scatto tra i profili colore */
-            filter: saturate(1.1); 
+            background-color: transparent; 
         }
 
         .claim {
@@ -52,9 +50,9 @@
 <body>
 
     <div class="splash-container">
-        <video id="splashVideo" autoplay muted playsinline>
-            <source src="assets/video/tuo-video.webm" type="video/webm">
-        </video>
+        <video id="splashVideo" autoplay muted playsinline preload="auto">
+            <source src="assets/video/NOME-DEL-TUO-VIDEO.webm" type="video/webm">
+            </video>
         
         <div class="claim">Integrazione Intelligente</div>
     </div>
@@ -62,19 +60,17 @@
     <script>
         const video = document.getElementById('splashVideo');
 
-        // Questa funzione scatta solo quando il video è arrivato alla fine
+        // Scatta quando il video si ferma sull'ultimo fotogramma
         video.onended = function() {
-            // Il video rimane fermo sull'ultimo fotogramma
-            // Aspettiamo 1 secondo per dare stabilità al logo finale
             setTimeout(function() {
                 window.location.href = "home.html"; 
             }, 1000); 
         };
 
-        // Sicurezza: se il video fallisce il caricamento dopo 7 secondi, vai comunque alla home
+        // Rete di salvataggio: se il file non viene trovato, va alla home dopo 6 secondi
         setTimeout(function() {
             window.location.href = "home.html";
-        }, 7000);
+        }, 6000);
     </script>
 </body>
 </html>
