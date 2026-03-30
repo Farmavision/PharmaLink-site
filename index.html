@@ -59,6 +59,16 @@
         
         <div class="claim">Integrazione Intelligente</div>
     </div>
+<script>
+  const video = document.getElementById('splashVideo');
 
+  video.onended = function() {
+    // Il video è fermo sull'ultimo fotogramma.
+    // Aspettiamo ad esempio 1 secondo (1000ms) prima di cambiare pagina
+    setTimeout(function() {
+      window.location.href = "home.html"; 
+    }, 1000); 
+  };
+</script>
 </body>
 </html>
