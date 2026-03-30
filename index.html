@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="6;url=home.html">
     <title>PharmLink | Welcome</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;900&display=swap" rel="stylesheet">
     
     <style>
         body {
-            /* Sfondo Tortora/Menta chiaro */
             background-color: #eaf8b2; 
             margin: 0;
             height: 100vh;
@@ -28,21 +26,21 @@
             padding: 20px;
         }
 
-       .splash-video {
+        #splashVideo {
             width: 100%;
             height: auto;
             background-color: #eaf8b2; 
             border: none;
             outline: none;
-            /* Questo crea un "bagliore" esterno dello stesso colore dello sfondo */
-            /* che copre la giuntura tra video e pagina */
-            box-shadow: 0 0 20px 20px #eaf8b2; 
+            /* Il box-shadow aiuta a sfumare i bordi del video con lo sfondo */
+            box-shadow: 0 0 30px 30px #eaf8b2; 
+            /* Importante: rimuove lo scatto tra i profili colore */
+            filter: saturate(1.1); 
         }
 
         .claim {
             margin-top: 30px;
             font-size: 1.1rem;
-            /* Testo in Blu Navy per contrasto */
             color: #17304a; 
             font-weight: 600;
             text-transform: uppercase;
@@ -53,22 +51,30 @@
 </head>
 <body>
 
-   <video id="splashVideo" autoplay muted playsinline>
-    <source src="assets/video/tuo-video.webm" type="video/webm">
-    </video>
+    <div class="splash-container">
+        <video id="splashVideo" autoplay muted playsinline>
+            <source src="assets/video/tuo-video.webm" type="video/webm">
+        </video>
         
         <div class="claim">Integrazione Intelligente</div>
     </div>
-<script>
-  const video = document.getElementById('splashVideo');
 
-  video.onended = function() {
-    // Il video è fermo sull'ultimo fotogramma.
-    // Aspettiamo ad esempio 1 secondo (1000ms) prima di cambiare pagina
-    setTimeout(function() {
-      window.location.href = "home.html"; 
-    }, 1000); 
-  };
-</script>
+    <script>
+        const video = document.getElementById('splashVideo');
+
+        // Questa funzione scatta solo quando il video è arrivato alla fine
+        video.onended = function() {
+            // Il video rimane fermo sull'ultimo fotogramma
+            // Aspettiamo 1 secondo per dare stabilità al logo finale
+            setTimeout(function() {
+                window.location.href = "home.html"; 
+            }, 1000); 
+        };
+
+        // Sicurezza: se il video fallisce il caricamento dopo 7 secondi, vai comunque alla home
+        setTimeout(function() {
+            window.location.href = "home.html";
+        }, 7000);
+    </script>
 </body>
 </html>
